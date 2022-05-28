@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Nodes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Nodes/Bullet_node.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://Nodes/FollowPaths/Path2a.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Nodes/FollowPaths/Path3a.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Nodes/Enemies/enemy_1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Nodes/Enemies/enemy_2.tscn" type="PackedScene" id=10]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -16,6 +18,8 @@ point_small = ExtResource( 5 )
 path1Node = ExtResource( 4 )
 path2Node = ExtResource( 7 )
 path3aNode = ExtResource( 8 )
+enemy1 = ExtResource( 9 )
+enemy2 = ExtResource( 10 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true

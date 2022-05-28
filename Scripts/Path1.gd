@@ -1,6 +1,6 @@
 extends Path2D
 
-var en1 = load("res://Nodes/Enemies/enemy_2.tscn")
+var en1 = load("res://Nodes/Enemies/enemy_1.tscn")
 var t = 0
 export var speed = 250
 
