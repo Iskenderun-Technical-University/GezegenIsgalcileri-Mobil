@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ship.svg" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Textures/hitbox_indicator.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.0
+height = 0.0
+
+[node name="Player" type="Area2D" groups=["Player"]]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="HitboxIndicator" type="Sprite" parent="."]
+visible = false
+z_index = 2
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+z_index = 1
+texture = ExtResource( 1 )
+
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
